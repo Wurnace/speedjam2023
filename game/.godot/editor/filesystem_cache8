@@ -1,0 +1,7 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1701462186
+default_env.tres::Environment::-1::1701462144::0::1::::<><>::
+icon.png::CompressedTexture2D::6506421692989659144::1701460563::1701462189::1::::<><>::
+Spatial.tscn::PackedScene::-1::1701462144::0::1::::<><>::res://shader_testing/pixelart_stylizer.gdshader
+::res://shader_testing/::1701462100
+pixelart_stylizer.gdshader::Shader::-1::1701462144::0::1::::<><>::
