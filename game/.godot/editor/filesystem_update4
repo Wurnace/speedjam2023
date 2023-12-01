@@ -1,3 +1,5 @@
 res://default_env.tres
 res://Spatial.tscn
 res://shader_testing/pixelart_stylizer.gdshader
+res://movement.tscn
+res://glider.gd
