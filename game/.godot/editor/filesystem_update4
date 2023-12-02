@@ -6,3 +6,4 @@ res://Scenes/Rope.tscn
 res://Scenes/Game.gd
 res://Scenes/Planet.tscn
 res://Assets/Scripts/Planet.gd
+res://Assets/Scripts/ship.gd

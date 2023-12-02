@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 PinJoint2D
 GrooveJoint2D
 Camera2D
 RigidBody2D
+=======
+Area2D
+CollisionPolygon2D
+Polygon2D
+RigidBody2D
+Node2D
+Sprite2D
+CollisionShape2D
+Camera3D
+XRCamera3D
+DirectionalLight3D
+MeshInstance3D
+CollisionShape3D
+StaticBody3D
+CSGBox3D
+>>>>>>> dc2b4ab2dae0d40ac54d29c0b444f8703f4b6503

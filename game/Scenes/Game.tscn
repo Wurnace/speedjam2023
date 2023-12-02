@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqbapeefmtljp"]
 
-[ext_resource type="PackedScene" uid="uid://cay6mgrhrkx8y" path="res://ship.tscn" id="1_ij78r"]
+[ext_resource type="PackedScene" uid="uid://v16agashiiyu" path="res://ship.tscn" id="1_ij78r"]
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_sj8ra"]
 [ext_resource type="PackedScene" uid="uid://c1ce62uuj2nya" path="res://Scenes/Planet.tscn" id="2_opuig"]
 

@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< HEAD
 ::res://::1701532854
 default_env.tres::Environment::2279363823076906227::1701532854::0::1::::<><>::
 icon.svg::CompressedTexture2D::7295254424364741391::1701527861::1701527981::1::::<><>::
@@ -16,3 +17,18 @@ Game.gd::GDScript::-1::1701532792::0::1::::<>Node2D<>::
 Game.tscn::PackedScene::3511533563080843621::1701532854::0::1::::<><>::uid://cay6mgrhrkx8y::::res://ship.tscn<>res://Scenes/Game.gd<>uid://c1ce62uuj2nya::::res://Scenes/Planet.tscn
 Planet.tscn::PackedScene::6602179735013636044::1701532854::0::1::::<><>::res://Assets/Scripts/Planet.gd<>uid://bcbsdvrpisokx::::res://Assets/Sprites/Red Planet.png
 Rope.tscn::PackedScene::7764152754940450114::1701532854::0::1::::<><>::uid://db641llx80bid::::res://icon.svg
+=======
+::res://::1701583191
+default_env.tres::Environment::2279363823076906227::1701583198::0::1::::<><>::
+icon.svg::CompressedTexture2D::7295254424364741391::1701582999::1701583155::1::::<><>::
+ship.gd::GDScript::-1::1701582999::0::1::::<>Area2D<>::
+::res://Assets/::1701582999
+::res://Assets/Scripts/::1701582999
+Planet.gd::GDScript::-1::1701583198::0::1::::<>Node2D<>::
+::res://Assets/Sprites/::1701582999
+egPlanet.png::CompressedTexture2D::3965139954092430749::1701582999::1701582999::1::::<><>::
+::res://Scenes/::1701583191
+Game.tscn::PackedScene::3511533563080843621::1701582999::0::1::::<><>::
+Planet.tscn::PackedScene::6602179735013636044::1701582999::0::1::::<><>::res://Assets/Scripts/Planet.gd<>uid://bwq0jm0jsb1x6::::res://Assets/Sprites/egPlanet.png
+ship.tscn::PackedScene::4824290431529218262::1701583198::0::1::::<><>::res://ship.gd<>uid://db641llx80bid::::res://icon.svg
+>>>>>>> dc2b4ab2dae0d40ac54d29c0b444f8703f4b6503
