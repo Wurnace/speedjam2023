@@ -28,5 +28,5 @@ texture = ExtResource("2_mvwfd")
 [node name="HightlightTimeout" type="Timer" parent="."]
 wait_time = 0.032
 
-[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_shape_entered" from="." to="." method="destroy"]
 [connection signal="timeout" from="HightlightTimeout" to="." method="_on_hightlight_timeout_timeout"]

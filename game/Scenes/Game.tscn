@@ -1,15 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqbapeefmtljp"]
+[gd_scene load_steps=7 format=3 uid="uid://bqbapeefmtljp"]
 
 [ext_resource type="PackedScene" uid="uid://v16agashiiyu" path="res://ship.tscn" id="1_ij78r"]
 [ext_resource type="Script" path="res://Assets/Scripts/Game.gd" id="1_sj8ra"]
 [ext_resource type="Texture2D" uid="uid://b1f50qxce6qcm" path="res://Assets/Sprites/spaceBackgroundtransparent.png" id="2_l2apc"]
 [ext_resource type="PackedScene" uid="uid://c1ce62uuj2nya" path="res://Scenes/Planet.tscn" id="2_opuig"]
-[ext_resource type="Texture2D" uid="uid://ws6al1qv7560" path="res://Assets/Sprites/PurplePlanet.png" id="3_7pleo"]
 [ext_resource type="Texture2D" uid="uid://c5gru24san4ot" path="res://Assets/Sprites/spaceBackgroundtransparentbutnotanditsactuallyblack.png" id="3_lf4ie"]
-[ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Red Planet.png" id="3_oe68f"]
 [ext_resource type="Texture2D" uid="uid://hwnfdhf1kfy6" path="res://Assets/Sprites/DryPlanet.png" id="7_r5noq"]
-[ext_resource type="Texture2D" uid="uid://dwj0tfi1ucn2d" path="res://Assets/Sprites/IcePlanet.png" id="8_clv3f"]
-[ext_resource type="Texture2D" uid="uid://clow5y7deoht3" path="res://Assets/Sprites/EggshellPlanet.png" id="9_iw515"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_sj8ra")
@@ -33,45 +29,6 @@ modulate = Color(1, 1, 1, 0.368627)
 texture = ExtResource("2_l2apc")
 centered = false
 
-[node name="Planet" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
-position = Vector2(896, 144)
-mass = 5.0
-texturepath = ExtResource("3_7pleo")
-planetscale = 1.5
-
-[node name="Planet2" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
-position = Vector2(1360, -496)
-mass = 5.0
-
-[node name="Planet3" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
-position = Vector2(560, -256)
-mass = 5.0
-texturepath = ExtResource("3_oe68f")
-planetscale = 0.5
-
-[node name="Planet4" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
-position = Vector2(-568, 320)
-mass = 5.0
-max_contacts_reported = 1
-contact_monitor = true
-texturepath = ExtResource("7_r5noq")
-planetscale = 0.3
-
-[node name="Planet5" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
-position = Vector2(-104, -320)
-mass = 5.0
-max_contacts_reported = 1
-contact_monitor = true
-texturepath = ExtResource("8_clv3f")
-
-[node name="Planet6" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
-position = Vector2(-904, -80)
-mass = 5.0
-max_contacts_reported = 1
-contact_monitor = true
-texturepath = ExtResource("9_iw515")
-planetscale = 0.7
-
 [node name="ShipContainer" type="Node2D" parent="."]
 rotation = 1.5708
 
@@ -88,6 +45,18 @@ rotation_smoothing_speed = 0.01
 node_b = NodePath("..")
 disable_collision = false
 softness = 5.0
+
+[node name="Planet" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(1016, 280)
+max_contacts_reported = 1
+contact_monitor = true
+
+[node name="Planet2" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(872, 128)
+max_contacts_reported = 1
+contact_monitor = true
+texturepath = ExtResource("7_r5noq")
+planetscale = 0.5
 
 [connection signal="connect_to_closest_body" from="ShipContainer/Ship" to="." method="_on_ship_connect_to_closest_body"]
 [connection signal="connect_to_closest_body_really" from="ShipContainer/Ship" to="." method="_on_ship_connect_to_closest_body_really"]

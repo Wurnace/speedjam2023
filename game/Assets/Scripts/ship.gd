@@ -4,6 +4,8 @@ signal connect_to_closest_body
 signal connect_to_closest_body_really
 signal disconnect
 
+@onready var magnet = $Sprite2D2
+
 var maxspeed = 2000
 var velmultiplier = 1
 var velocityforward = 0

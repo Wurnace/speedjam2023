@@ -12,3 +12,4 @@ res://Scenes/OffScreenIndicator.tscn
 res://Assets/Scripts/Game.gd
 res://Scenes/Menu.tscn
 res://Scenes/Menu.gd
+res://Scenes/Asteroids/Asteroid1.tscn
