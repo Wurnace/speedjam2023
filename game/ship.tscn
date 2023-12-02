@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cay6mgrhrkx8y"]
 
 [ext_resource type="Script" path="res://ship.gd" id="1_mwe3f"]
-[ext_resource type="Texture2D" uid="uid://cyx02x1k2h3hc" path="res://icon.png" id="2_ufru2"]
+[ext_resource type="Texture2D" uid="uid://db641llx80bid" path="res://icon.svg" id="2_22ub1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmrwo"]
 size = Vector2(32, 32)
@@ -13,6 +13,5 @@ script = ExtResource("1_mwe3f")
 shape = SubResource("RectangleShape2D_hmrwo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4.76837e-07, 4.76837e-07)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_ufru2")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_22ub1")

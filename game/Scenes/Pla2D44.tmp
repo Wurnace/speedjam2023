@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1ce62uuj2nya"]
+
+[ext_resource type="Script" path="res://Assests/Scripts/Planet.gd" id="1_28mkq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m8j6o"]
+radius = 65.6201
+
+[node name="Planet" type="RigidBody2D"]
+script = ExtResource("1_28mkq")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m8j6o")
+
+[node name="Sprite" type="Sprite2D" parent="."]
