@@ -14,7 +14,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):#
 	if targetplanet:
-		ship.magnet.look_at(targetplanet.global_position)
+		var wr = weakref(targetplanet)
+		if (wr.get_ref()):
+			ship.magnet.look_at(targetplanet.global_position)
 	
 	_on_ship_connect_to_closest_body()
 

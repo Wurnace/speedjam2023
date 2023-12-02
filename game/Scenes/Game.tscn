@@ -37,8 +37,6 @@ rotation = -1.5708
 
 [node name="Camera2D" type="Camera2D" parent="ShipContainer/Ship"]
 position = Vector2(0, -0.000259399)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
 rotation_smoothing_speed = 0.01
 
 [node name="Attachment" type="PinJoint2D" parent="ShipContainer/Ship"]
