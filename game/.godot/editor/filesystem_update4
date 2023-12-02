@@ -7,3 +7,8 @@ res://Scenes/Game.gd
 res://Scenes/Planet.tscn
 res://Assets/Scripts/Planet.gd
 res://Assets/Scripts/ship.gd
+res://Assets/Scripts/OffScreenIndicator.gd
+res://Scenes/OffScreenIndicator.tscn
+res://Assets/Scripts/Game.gd
+res://Scenes/Menu.tscn
+res://Scenes/Menu.gd

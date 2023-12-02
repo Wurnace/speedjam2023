@@ -1,30 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqbapeefmtljp"]
+[gd_scene load_steps=8 format=3 uid="uid://bqbapeefmtljp"]
 
 [ext_resource type="PackedScene" uid="uid://v16agashiiyu" path="res://ship.tscn" id="1_ij78r"]
-[ext_resource type="Script" path="res://Scenes/Game.gd" id="1_sj8ra"]
+[ext_resource type="Script" path="res://Assets/Scripts/Game.gd" id="1_sj8ra"]
+[ext_resource type="Texture2D" uid="uid://cgmdblafswlh5" path="res://Assets/Sprites/spaceBackground.png" id="2_k5lbq"]
+[ext_resource type="Texture2D" uid="uid://b1f50qxce6qcm" path="res://Assets/Sprites/spaceBackgroundtransparent.png" id="2_l2apc"]
 [ext_resource type="PackedScene" uid="uid://c1ce62uuj2nya" path="res://Scenes/Planet.tscn" id="2_opuig"]
+[ext_resource type="Texture2D" uid="uid://ws6al1qv7560" path="res://Assets/Sprites/PurplePlanet.png" id="3_7pleo"]
+[ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Red Planet.png" id="3_oe68f"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_sj8ra")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+follow_viewport_scale = 5.0
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2(1920, 1920)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_k5lbq")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2(1920, 1920)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("2_l2apc")
+
 [node name="Planet" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
-position = Vector2(808, 16)
+position = Vector2(896, 144)
 mass = 5.0
+texturepath = ExtResource("3_7pleo")
+planetscale = 3.0
 
 [node name="Planet2" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
 position = Vector2(1360, -496)
 mass = 5.0
+planetscale = 1.5
 
 [node name="Planet3" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
 position = Vector2(560, -256)
 mass = 5.0
+texturepath = ExtResource("3_oe68f")
 
 [node name="ShipContainer" type="Node2D" parent="."]
-position = Vector2(736, -160)
 rotation = 1.5708
 
 [node name="Ship" parent="ShipContainer" instance=ExtResource("1_ij78r")]
-position = Vector2(0, -72)
 rotation = -1.5708
 
 [node name="Camera2D" type="Camera2D" parent="ShipContainer/Ship"]
@@ -34,8 +57,10 @@ rotation_smoothing_enabled = true
 rotation_smoothing_speed = 0.01
 
 [node name="Attachment" type="PinJoint2D" parent="ShipContainer/Ship"]
-position = Vector2(0, 176)
-node_a = NodePath("../../../Planet")
 node_b = NodePath("..")
-bias = 0.9
-softness = 2.27
+disable_collision = false
+softness = 5.0
+
+[connection signal="connect_to_closest_body" from="ShipContainer/Ship" to="." method="_on_ship_connect_to_closest_body"]
+[connection signal="connect_to_closest_body_really" from="ShipContainer/Ship" to="." method="_on_ship_connect_to_closest_body_really"]
+[connection signal="disconnect" from="ShipContainer/Ship" to="." method="_on_ship_disconnect"]
