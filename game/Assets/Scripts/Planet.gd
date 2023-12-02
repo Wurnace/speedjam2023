@@ -12,7 +12,7 @@ func _ready():
 	setTexture(texturepath.load_path)
 	$Sprite.scale = Vector2(planetscale, planetscale)
 	$Collision.scale = Vector2(planetscale, planetscale)
-	$Highlight.scale = Vector2(planetscale + 0.05, planetscale + 0.05)
+	$Highlight.scale = Vector2(planetscale + 0.1, planetscale + 0.1)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

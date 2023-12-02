@@ -3,6 +3,7 @@ extends Node2D
 @onready var ship = $ShipContainer/Ship
 @onready var pinjoint = $ShipContainer/Ship/Attachment
 var planets
+var targeted_planet
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,6 +13,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if targeted_planet:
+		ship.magnet.look_at(targeted_planet.global_position)
 	_on_ship_connect_to_closest_body()
 
 
@@ -42,6 +45,7 @@ func _on_ship_connect_to_closest_body_really():
 			prevplanet = node
 	
 	if prevplanet:
+		targeted_planet = prevplanet
 		pinjoint.global_position = prevplanet.global_position
 		pinjoint.set_node_a(prevplanet.get_path())
 

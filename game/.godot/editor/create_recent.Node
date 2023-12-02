@@ -1,5 +1,6 @@
-ParallaxBackground
 Sprite2D
+Node2D
+ParallaxBackground
 ParallaxLayer
 CanvasLayer
 Camera2D
@@ -11,4 +12,3 @@ RigidBody2D
 Area2D
 CollisionPolygon2D
 Polygon2D
-RigidBody2D

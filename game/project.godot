@@ -15,6 +15,7 @@ run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 <<<<<<<HEADconfig/name="SPEEDJAM #3"
+config/size/resizable=true
 
 [display]
 

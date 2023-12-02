@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqbapeefmtljp"]
+[gd_scene load_steps=11 format=3 uid="uid://bqbapeefmtljp"]
 
 [ext_resource type="PackedScene" uid="uid://v16agashiiyu" path="res://ship.tscn" id="1_ij78r"]
 [ext_resource type="Script" path="res://Assets/Scripts/Game.gd" id="1_sj8ra"]
-[ext_resource type="Texture2D" uid="uid://cgmdblafswlh5" path="res://Assets/Sprites/spaceBackground.png" id="2_k5lbq"]
 [ext_resource type="Texture2D" uid="uid://b1f50qxce6qcm" path="res://Assets/Sprites/spaceBackgroundtransparent.png" id="2_l2apc"]
 [ext_resource type="PackedScene" uid="uid://c1ce62uuj2nya" path="res://Scenes/Planet.tscn" id="2_opuig"]
 [ext_resource type="Texture2D" uid="uid://ws6al1qv7560" path="res://Assets/Sprites/PurplePlanet.png" id="3_7pleo"]
+[ext_resource type="Texture2D" uid="uid://c5gru24san4ot" path="res://Assets/Sprites/spaceBackgroundtransparentbutnotanditsactuallyblack.png" id="3_lf4ie"]
 [ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Red Planet.png" id="3_oe68f"]
+[ext_resource type="Texture2D" uid="uid://hwnfdhf1kfy6" path="res://Assets/Sprites/DryPlanet.png" id="7_r5noq"]
+[ext_resource type="Texture2D" uid="uid://dwj0tfi1ucn2d" path="res://Assets/Sprites/IcePlanet.png" id="8_clv3f"]
+[ext_resource type="Texture2D" uid="uid://clow5y7deoht3" path="res://Assets/Sprites/EggshellPlanet.png" id="9_iw515"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_sj8ra")
@@ -14,35 +17,60 @@ script = ExtResource("1_sj8ra")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
-follow_viewport_scale = 5.0
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
-motion_mirroring = Vector2(1920, 1920)
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2(1150, 648)
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("2_k5lbq")
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource("3_lf4ie")
+centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
-motion_mirroring = Vector2(1920, 1920)
+motion_mirroring = Vector2(1152, 648)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0.368627)
 texture = ExtResource("2_l2apc")
+centered = false
 
 [node name="Planet" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
 position = Vector2(896, 144)
 mass = 5.0
 texturepath = ExtResource("3_7pleo")
-planetscale = 3.0
+planetscale = 1.5
 
 [node name="Planet2" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
 position = Vector2(1360, -496)
 mass = 5.0
-planetscale = 1.5
 
 [node name="Planet3" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
 position = Vector2(560, -256)
 mass = 5.0
 texturepath = ExtResource("3_oe68f")
+planetscale = 0.5
+
+[node name="Planet4" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(-568, 320)
+mass = 5.0
+max_contacts_reported = 1
+contact_monitor = true
+texturepath = ExtResource("7_r5noq")
+planetscale = 0.3
+
+[node name="Planet5" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(-104, -320)
+mass = 5.0
+max_contacts_reported = 1
+contact_monitor = true
+texturepath = ExtResource("8_clv3f")
+
+[node name="Planet6" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(-904, -80)
+mass = 5.0
+max_contacts_reported = 1
+contact_monitor = true
+texturepath = ExtResource("9_iw515")
+planetscale = 0.7
 
 [node name="ShipContainer" type="Node2D" parent="."]
 rotation = 1.5708
