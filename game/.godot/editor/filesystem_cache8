@@ -1,7 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701462186
-default_env.tres::Environment::-1::1701462144::0::1::::<><>::
+::res://::1701524336
+default_env.tres::Environment::1293088756689191824::1701464665::0::1::::<><>::
+glider.gd::GDScript::-1::1701464598::0::1::::<>StaticBody3D<>::
 icon.png::CompressedTexture2D::6506421692989659144::1701460563::1701462189::1::::<><>::
-Spatial.tscn::PackedScene::-1::1701462144::0::1::::<><>::res://shader_testing/pixelart_stylizer.gdshader
-::res://shader_testing/::1701462100
-pixelart_stylizer.gdshader::Shader::-1::1701462144::0::1::::<><>::
+movement.tscn::PackedScene::81158328821025833::1701464665::0::1::::<><>::res://glider.gd
+Spatial.tscn::PackedScene::7583134729400101427::1701464598::0::1::::<><>::res://shader_testing/pixelart_stylizer.gdshader
+::res://shader_testing/::1701464754
+pixelart_stylizer.gdshader::Shader::-1::1701464754::0::1::::<><>::
