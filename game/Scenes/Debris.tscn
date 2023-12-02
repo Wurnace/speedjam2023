@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://c2ucf7gwarvv4"]
-
-[node name="Debris" type="RigidBody2D"]
-gravity_scale = 0.0
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

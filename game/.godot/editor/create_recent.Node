@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+Area2D
+ParallaxBackground
+>>>>>>> 80be14c391789a1f3f3491b72668d62d59544ff0
 Sprite2D
 Node2D
 ParallaxBackground
@@ -9,6 +14,5 @@ Timer
 PinJoint2D
 GrooveJoint2D
 RigidBody2D
-Area2D
 CollisionPolygon2D
 Polygon2D
