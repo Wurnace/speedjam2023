@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://bqbapeefmtljp"]
+[gd_scene load_steps=4 format=3 uid="uid://bqbapeefmtljp"]
+
+[ext_resource type="PackedScene" uid="uid://cay6mgrhrkx8y" path="res://ship.tscn" id="1_ij78r"]
+[ext_resource type="Script" path="res://Scenes/Game.gd" id="1_sj8ra"]
+[ext_resource type="PackedScene" uid="uid://c1ce62uuj2nya" path="res://Scenes/Planet.tscn" id="2_opuig"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_sj8ra")
+
+[node name="Planet" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(808, 16)
+mass = 5.0
+
+[node name="Planet2" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(1360, -496)
+mass = 5.0
+
+[node name="Planet3" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
+position = Vector2(560, -256)
+mass = 5.0
+
+[node name="ShipContainer" type="Node2D" parent="."]
+position = Vector2(736, -160)
+rotation = 1.5708
+
+[node name="Ship" parent="ShipContainer" instance=ExtResource("1_ij78r")]
+position = Vector2(0, -72)
+rotation = -1.5708
+
+[node name="Camera2D" type="Camera2D" parent="ShipContainer/Ship"]
+position = Vector2(0, -0.000259399)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 0.01
+
+[node name="Attachment" type="PinJoint2D" parent="ShipContainer/Ship"]
+position = Vector2(0, 176)
+node_a = NodePath("../../../Planet")
+node_b = NodePath("..")
+bias = 0.9
+softness = 2.27

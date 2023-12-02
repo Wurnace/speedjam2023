@@ -1,13 +1,13 @@
 extends Node2D
 
-func setTexture(path: String):
-	$Sprite.texture = load(path)
-
+@onready var ship = $Ship
+@onready var pinjoint = $ShipContainer/Attachment
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	setTexture("res://Assets/Sprites/Water Planet.png")
+	pass
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	return delta
+	pass

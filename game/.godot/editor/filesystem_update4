@@ -1,8 +1,8 @@
 res://default_env.tres
-res://glider.gd
-res://shader_testing/pixelart_stylizer.gdshader
-res://ship.gd
 res://ship.tscn
-res://Assets/Scripts/Planet.gd
 res://Scenes/Game.tscn
+res://ship.gd
+res://Scenes/Rope.tscn
+res://Scenes/Game.gd
 res://Scenes/Planet.tscn
+res://Assets/Scripts/Planet.gd

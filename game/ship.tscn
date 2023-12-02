@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmrwo"]
 size = Vector2(32, 32)
 
-[node name="Node2D" type="Area2D"]
+[node name="Ship" type="RigidBody2D"]
+mass = 10000.0
+gravity_scale = 0.0
 script = ExtResource("1_mwe3f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

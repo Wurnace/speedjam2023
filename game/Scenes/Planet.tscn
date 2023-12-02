@@ -1,16 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1ce62uuj2nya"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Planet.gd" id="1_8umit"]
-[ext_resource type="Texture2D" uid="uid://bwq0jm0jsb1x6" path="res://Assets/Sprites/egPlanet.png" id="2_orjir"]
+[ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Red Planet.png" id="2_mvwfd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8j6o"]
-radius = 65.6201
+radius = 102.005
 
 [node name="Planet" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_8umit")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m8j6o")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_orjir")
+texture = ExtResource("2_mvwfd")

@@ -1,4 +1,4 @@
-extends Area2D
+extends RigidBody2D
 
 var maxspeed = 500
 var velmultiplier = 1
@@ -27,11 +27,13 @@ func _process(delta):
 	if Input.is_action_just_released("acc") or Input.is_action_just_released("deacc"):
 		velmultiplier = 0
 	if Input.is_action_pressed("left"):
-		rotation -= 0.08
+		angular_velocity = -2
 	if Input.is_action_pressed("right"):
-		rotation += 0.08
-	
-	print(velocityforward)
+		angular_velocity = 2
+	if Input.is_action_just_released("left") or Input.is_action_just_released("right"):
+		constant_torque = 0
+		angular_velocity = 0
 	
 	velocitytotal = Vector2(velocityforward, 0).rotated(rotation)
-	position += velocitytotal * delta
+	linear_velocity = velocitytotal
+	
