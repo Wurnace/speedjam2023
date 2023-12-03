@@ -4,13 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://bwq0jm0jsb1x6" path="res://Assets/Sprites/egPlanet.png" id="2_orjir"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8j6o"]
-radius = 65.6201
+radius = 102.0
 
 [node name="Planet" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_8umit")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_orjir")
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Area"]
+shape = SubResource("CircleShape2D_m8j6o")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m8j6o")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_orjir")
+[connection signal="area_entered" from="Area" to="." method="destroy"]

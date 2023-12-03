@@ -31,7 +31,5 @@ func _process(delta):
 	if Input.is_action_pressed("right"):
 		rotation += 0.08
 	
-	print(velocityforward)
-	
 	velocitytotal = Vector2(velocityforward, 0).rotated(rotation)
 	position += velocitytotal * delta

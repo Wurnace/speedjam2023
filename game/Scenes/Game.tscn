@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://bqbapeefmtljp"]
+[gd_scene load_steps=3 format=3 uid="uid://bqbapeefmtljp"]
+
+[ext_resource type="PackedScene" uid="uid://c1ce62uuj2nya" path="res://Scenes/Planet.tscn" id="1_uxiu3"]
+[ext_resource type="PackedScene" uid="uid://cay6mgrhrkx8y" path="res://Scenes/ship.tscn" id="2_a23p7"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Planet" parent="." instance=ExtResource("1_uxiu3")]
+position = Vector2(467, 397)
+
+[node name="Node2D" parent="." instance=ExtResource("2_a23p7")]
+position = Vector2(222, 217)
+
+[node name="Planet2" parent="." instance=ExtResource("1_uxiu3")]
+position = Vector2(464, 131)
+gravity_scale = 0.5
