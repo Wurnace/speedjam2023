@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 CollisionPolygon2D
 Area2D
+=======
+ParallaxBackground
+Sprite2D
+ParallaxLayer
+CanvasLayer
+Camera2D
+VisibleOnScreenNotifier2D
+Timer
+>>>>>>> 5284a40588c9f9c2e5fdcf3da37b197107c8f48f
 PinJoint2D
 GrooveJoint2D
-Camera2D
 RigidBody2D
+<<<<<<< HEAD
 Polygon2D
 RigidBody2D
 Node2D
@@ -12,3 +22,9 @@ CollisionShape2D
 Camera3D
 XRCamera3D
 DirectionalLight3D
+=======
+Area2D
+CollisionPolygon2D
+Polygon2D
+RigidBody2D
+>>>>>>> 5284a40588c9f9c2e5fdcf3da37b197107c8f48f

@@ -1,14 +1,23 @@
 extends Node2D
 
+<<<<<<< HEAD
 const AsteroidPathsExts = [1]
+=======
+@export var texturepath : CompressedTexture2D
+@export var planetscale = 1.0
+>>>>>>> 5284a40588c9f9c2e5fdcf3da37b197107c8f48f
 
 func setTexture(path: String):
 	$Sprite.texture = load(path)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	setTexture("res://Assets/Sprites/Water Planet.png")
+	setTexture(texturepath.load_path)
+	$Sprite.scale = Vector2(planetscale, planetscale)
+	$Collision.scale = Vector2(planetscale, planetscale)
+	$Highlight.scale = Vector2(planetscale + 0.05, planetscale + 0.05)
 
+<<<<<<< HEAD
 var isDead : bool = false
 func _process(_delta):
 	if isDead: queue_free()
@@ -36,3 +45,15 @@ func destroy(area: Area2D):
 		var current_asteroid_path = asteroidPaths[rng.randi_range(0, asteroidPaths.size())]
 		spawnAsteroid(current_asteroid_path)
 	isDead = true
+=======
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	return delta
+
+func _show_highlight():
+	$Highlight.show()
+	$HightlightTimeout.start()
+
+func _on_hightlight_timeout_timeout():
+	$Highlight.hide()
+>>>>>>> 5284a40588c9f9c2e5fdcf3da37b197107c8f48f

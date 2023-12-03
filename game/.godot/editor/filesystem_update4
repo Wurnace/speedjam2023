@@ -1,8 +1,16 @@
 res://default_env.tres
 res://Scenes/ship.tscn
 res://Assets/Scripts/ship.gd
+<<<<<<< HEAD
 res://Scenes/Planet.tscn
 res://Scenes/Debris.tscn
 res://Assets/Scripts/Planet.gd
 res://Scenes/Asteroids/Debris.tscn
 res://Scenes/Asteroids/Asteroid1.tscn
+=======
+res://Assets/Scripts/OffScreenIndicator.gd
+res://Scenes/OffScreenIndicator.tscn
+res://Assets/Scripts/Game.gd
+res://Scenes/Menu.tscn
+res://Scenes/Menu.gd
+>>>>>>> 5284a40588c9f9c2e5fdcf3da37b197107c8f48f

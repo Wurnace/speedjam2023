@@ -1,13 +1,12 @@
 extends Node2D
 
-@onready var ship = $Ship
-@onready var pinjoint = $ShipContainer/Attachment
+var background
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	background = $Background
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	background.global_rotation += 0.001

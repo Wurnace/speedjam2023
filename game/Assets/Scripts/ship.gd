@@ -1,6 +1,10 @@
 extends RigidBody2D
 
-var maxspeed = 500
+signal connect_to_closest_body
+signal connect_to_closest_body_really
+signal disconnect
+
+var maxspeed = 2000
 var velmultiplier = 1
 var velocityforward = 0
 var velocitytotal = Vector2.ZERO
@@ -34,6 +38,15 @@ func _process(delta):
 		constant_torque = 0
 		angular_velocity = 0
 		rotation += 0.08
+<<<<<<< HEAD
+=======
+	if Input.is_action_pressed("connect"):
+		emit_signal("connect_to_closest_body")
+	if Input.is_action_pressed("connect_really"):
+		emit_signal("connect_to_closest_body_really")
+	if Input.is_action_pressed("disconnect"):
+		emit_signal("disconnect")
+>>>>>>> 5284a40588c9f9c2e5fdcf3da37b197107c8f48f
 	
 	velocitytotal = Vector2(velocityforward, 0).rotated(rotation)
 	linear_velocity = velocitytotal

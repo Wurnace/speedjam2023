@@ -1,7 +1,62 @@
 [gd_scene load_steps=4 format=3 uid="uid://v16agashiiyu"]
 
-[ext_resource type="Script" path="res://ship.gd" id="1_mwe3f"]
-[ext_resource type="Texture2D" uid="uid://db641llx80bid" path="res://icon.svg" id="2_22ub1"]
+[ext_resource type="Texture2D" uid="uid://0gl1ogd1s4x0" path="res://Assets/Sprites/ship.png" id="1_1mveb"]
+
+[sub_resource type="GDScript" id="GDScript_3icyd"]
+script/source = "extends RigidBody2D
+
+signal connect_to_closest_body
+signal connect_to_closest_body_really
+signal disconnect
+
+var connected = false
+
+var maxspeed = 1000
+var velmultiplier = 1
+var velocityforward = 0
+var velocitytotal = Vector2.ZERO
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if Input.is_action_pressed(\"acc\") && velocityforward < maxspeed:
+		if velocityforward + velmultiplier < maxspeed:
+			velocityforward += velmultiplier
+			velmultiplier += 1
+		else:
+			velocityforward += 1
+	if Input.is_action_pressed(\"deacc\") && velocityforward > 0:
+		if velocityforward - velmultiplier > 0:
+			velocityforward -= velmultiplier
+			velmultiplier += 1
+		else:
+			velocityforward -= 1
+	if Input.is_action_just_released(\"acc\") or Input.is_action_just_released(\"deacc\"):
+		velmultiplier = 0
+	if Input.is_action_pressed(\"left\"):
+		angular_velocity = -2
+	if Input.is_action_pressed(\"right\"):
+		angular_velocity = 2
+	if Input.is_action_just_released(\"left\") or Input.is_action_just_released(\"right\"):
+		constant_torque = 0
+		angular_velocity = 0
+		
+	if Input.is_action_just_pressed(\"connect\"):
+		emit_signal(\"connect_to_closest_body\")
+	if Input.is_action_just_pressed(\"connect_really\"):
+		emit_signal(\"connect_to_closest_body\")
+		emit_signal(\"connect_to_closest_body_really\")
+	if Input.is_action_just_pressed(\"disconnect\"):
+		emit_signal(\"disconnect\")
+	
+	velocitytotal = Vector2(velocityforward, 0).rotated(rotation)
+	linear_velocity = velocitytotal
+	
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmrwo"]
 size = Vector2(32, 32)
@@ -9,11 +64,11 @@ size = Vector2(32, 32)
 [node name="Ship" type="RigidBody2D"]
 mass = 10000.0
 gravity_scale = 0.0
-script = ExtResource("1_mwe3f")
+script = SubResource("GDScript_3icyd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hmrwo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_22ub1")
+texture = ExtResource("1_1mveb")
