@@ -6,15 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmrwo"]
 size = Vector2(32, 32)
 
-<<<<<<< HEAD:game/ship.tscn
-[node name="Ship" type="RigidBody2D"]
-mass = 10000.0
-gravity_scale = 0.0
-script = ExtResource("1_mwe3f")
-=======
 [node name="Node2D" type="Area2D"]
 script = ExtResource("1_qngsi")
->>>>>>> dc2b4ab2dae0d40ac54d29c0b444f8703f4b6503:game/Scenes/ship.tscn
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hmrwo")

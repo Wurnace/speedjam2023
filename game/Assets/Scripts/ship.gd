@@ -29,14 +29,11 @@ func _process(delta):
 	if Input.is_action_pressed("left"):
 		angular_velocity = -2
 	if Input.is_action_pressed("right"):
-<<<<<<< HEAD:game/ship.gd
 		angular_velocity = 2
 	if Input.is_action_just_released("left") or Input.is_action_just_released("right"):
 		constant_torque = 0
 		angular_velocity = 0
-=======
 		rotation += 0.08
->>>>>>> dc2b4ab2dae0d40ac54d29c0b444f8703f4b6503:game/Assets/Scripts/ship.gd
 	
 	velocitytotal = Vector2(velocityforward, 0).rotated(rotation)
 	linear_velocity = velocitytotal

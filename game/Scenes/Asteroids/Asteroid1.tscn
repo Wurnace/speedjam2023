@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3l7or6uct771"]
+
+[ext_resource type="Texture2D" uid="uid://cu1qlqtplob0j" path="res://Assets/Sprites/Asteroids/Asteroid.webp" id="1_mxrps"]
+
+[node name="Asteroid1" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(15, 44, 27, 28, 69, 39, 85, 32, 80, 8, 73, -18, 56, -20, 39, -39, 16, -64, -19, -73, -28, -53, -19, -40, -20, -29, -61, -15, -86, 14, -82, 42, -51, 63, -46, 76, -22, 78, 1, 74, 11, 60)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+texture = ExtResource("1_mxrps")
