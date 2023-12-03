@@ -1,19 +1,14 @@
-<<<<<<< HEAD
-CollisionShape2D
-=======
-Sprite2D
 TextureButton
-VisibleOnScreenNotifier2D
->>>>>>> a498d3e2294629bc51a708cbd3c6f9ccac714add
-Area2D
-VisibleOnScreenNotifier2D
-ParallaxBackground
-Node2D
-ParallaxBackground
-ParallaxLayer
-CanvasLayer
-Camera2D
+TextEdit
+RichTextLabel
+ScrollContainer
+Sprite2D
 Timer
-PinJoint2D
-GrooveJoint2D
-RigidBody2D
+CPUParticles2D
+Node
+CanvasLayer
+VisibleOnScreenNotifier2D
+PathFollow2D
+Path2D
+CollisionShape2D
+Area2D

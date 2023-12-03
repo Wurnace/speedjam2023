@@ -10,12 +10,19 @@ config_version=5
 
 [application]
 
-config/name="SPEEDJAM #3"
-run/main_scene="res://Scenes/Menu/Menu.tscn"
+config/name="Destroy Planets ASAP!"
+config/description="Destroy Planets ASAP!"
+run/main_scene="res://Scenes/Menu.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="DestroyPlanetsASAP"
 config/features=PackedStringArray("4.2")
-config/icon="res://icon.png"
+config/icon="res://Assets/Sprites/ship.png"
 <<<<<<<HEADconfig/name="SPEEDJAM #3"
 config/size/resizable=true
+
+[autoload]
+
+VarStorer="*res://Assets/Scripts/VarStorer.gd"
 
 [display]
 
@@ -62,6 +69,11 @@ disconnect={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(117, 23),"global_position":Vector2(121, 64),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"echo":false,"script":null)
+]
+}
+reset={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"echo":false,"script":null)
 ]
 }
 

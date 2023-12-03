@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbu21hsicy81p"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/VarStorer.gd" id="1_umebp"]
+
+[node name="VarStorer" type="Node"]
+script = ExtResource("1_umebp")

@@ -8,6 +8,8 @@ const AsteroidPathsIDs = [1]
 
 var distanceto = 0
 
+signal dying
+
 func setTexture(path: String):
 	$Sprite.texture = load(path)
 
@@ -30,7 +32,9 @@ func _on_hightlight_timeout_timeout():
 
 @export var isDead : bool = false
 func _process(_delta):
-	if isDead: queue_free()
+	if isDead:
+		emit_signal("dying")
+		queue_free()
 	$OffScreenIndicator.look_at(global_position)
 	$OffScreenIndicator.distanceto = distanceto
 

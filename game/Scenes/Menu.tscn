@@ -1,13 +1,140 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdthamxlt8jib"]
+[gd_scene load_steps=8 format=3 uid="uid://cdthamxlt8jib"]
 
-[ext_resource type="Script" path="res://Scenes/Menu.gd" id="1_xknxd"]
-[ext_resource type="Texture2D" path="res://Assets/Sprites/spaceBackground.png" id="2_pe6yo"]
+[ext_resource type="Script" path="res://Assets/Scripts/Menu.gd" id="1_xknxd"]
+[ext_resource type="Texture2D" uid="uid://cgmdblafswlh5" path="res://Assets/Sprites/UI/spaceBackground.png" id="2_fffmu"]
+[ext_resource type="Texture2D" uid="uid://cwdyd47l226rl" path="res://Assets/Sprites/Asteroids/Asteroid1.webp" id="3_6wqc1"]
+[ext_resource type="Texture2D" uid="uid://dw63cnnr4wav4" path="res://Assets/Sprites/UI/PlayButtonNormal.png" id="4_85tpy"]
+[ext_resource type="Texture2D" uid="uid://coom6wjhm8m7x" path="res://Assets/Sprites/UI/PlayButtonHover.png" id="5_nyvx4"]
+[ext_resource type="FontFile" uid="uid://b4pfncn0u4kwx" path="res://Assets/Fonts/Belanosima-SemiBold.ttf" id="6_5h0yp"]
+
+[sub_resource type="Curve2D" id="Curve2D_ytkd8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 784, -520, 0, 0, 0, 0, 184, 528, 0, 0, 0, 0, -32, -600, 0, 0, 0, 0, -808, 520)
+}
+point_count = 4
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_xknxd")
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(1.15, 1.15)
-texture = ExtResource("2_pe6yo")
+texture = ExtResource("2_fffmu")
 
 [node name="Camera2D" type="Camera2D" parent="Background"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_6wqc1")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Sprite2D"]
+position = Vector2(-1, 1)
+scale = Vector2(0.9, 0.9)
+rect = Rect2(-125, -125, 250, 250)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ytkd8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(784, -520)
+rotates = false
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 208.0
+offset_top = 192.0
+offset_right = 560.0
+offset_bottom = 312.0
+texture_normal = ExtResource("4_85tpy")
+texture_pressed = ExtResource("5_nyvx4")
+texture_hover = ExtResource("5_nyvx4")
+texture_focused = ExtResource("5_nyvx4")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 16.0
+offset_right = 256.0
+offset_bottom = 104.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.690196)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("6_5h0yp")
+theme_override_font_sizes/normal_font_size = 72
+text = "Play"
+scroll_active = false
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = -152.0
+offset_top = 192.0
+offset_right = 200.0
+offset_bottom = 312.0
+texture_normal = ExtResource("4_85tpy")
+texture_pressed = ExtResource("5_nyvx4")
+texture_hover = ExtResource("5_nyvx4")
+texture_focused = ExtResource("5_nyvx4")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton2"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 16.0
+offset_right = 256.0
+offset_bottom = 104.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.690196)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("6_5h0yp")
+theme_override_font_sizes/normal_font_size = 36
+text = "Leader Board"
+scroll_active = false
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = -512.0
+offset_top = -264.0
+offset_right = 224.0
+offset_bottom = -176.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.690196)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("6_5h0yp")
+theme_override_font_sizes/normal_font_size = 72
+text = "Destroy Planets ASAP!"
+scroll_active = false
+
+[node name="Title2" type="RichTextLabel" parent="."]
+offset_left = -512.0
+offset_top = -176.0
+offset_right = 96.0
+offset_bottom = -24.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 0.8)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.690196)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("6_5h0yp")
+theme_override_font_sizes/normal_font_size = 15
+text = "Like the name suggests, your goal is to destroy all the planets in the solar system as soon as possible, by grabbing them and throwing them at objects! But don't destroy yourself!
+
+Click/Space to grab a planet
+Right click/Q to let go
+WASD to accelerate, decellerate and turn
+R to restart
+Esc to quit to menu"
+scroll_active = false
+
+[connection signal="screen_exited" from="Sprite2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

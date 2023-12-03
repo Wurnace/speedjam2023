@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://db1a0w77dqs7k" path="res://Assets/Sprites/UI/Highlight.png" id="3_4qf21"]
 [ext_resource type="PackedScene" uid="uid://b0ek7mjty26ej" path="res://Scenes/OffScreenIndicator.tscn" id="4_36fvu"]
 [ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Planets/Red Planet.png" id="4_87ix6"]
-[ext_resource type="Script" path="res://Scenes/Gravity.gd" id="6_qtxdv"]
+[ext_resource type="Script" path="res://Assets/Scripts/Gravity.gd" id="6_qtxdv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8j6o"]
 radius = 112.0

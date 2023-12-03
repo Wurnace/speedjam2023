@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://oe7ybvc7xch4"]
+
+[node name="ScoreDisplay" type="Node"]
