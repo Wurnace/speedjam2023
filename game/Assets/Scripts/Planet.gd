@@ -34,7 +34,11 @@ func spawnAsteroid(filepath: String, rng: RandomNumberGenerator):
 	var deviation = Vector2(rng.randf_range(-1, 1), rng.randf_range(-1, 1))
 	var inst = asteroids.get(filepath).instantiate()
 	inst.position = position + deviation
-	inst.scale = Vector2(0.1, 0.1)
+	
+	var rand_scale = rng.randf_range(0.5, 1.5)
+	var size = Vector2(rand_scale, rand_scale)
+	inst.get_node("Collision").scale = size
+	inst.get_node("Sprite").scale = size
 	#inst.get_node("Collision").position = position - deviation
 	get_parent().add_child(inst)
 	return inst
