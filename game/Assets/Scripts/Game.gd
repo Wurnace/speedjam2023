@@ -28,6 +28,7 @@ func _on_ship_connect_to_closest_body():
 	for node in planets:
 		var wr = weakref(node)
 		if (wr.get_ref()):
+			node.distanceto = node.position.distance_to(shippos)
 			if prevplanet:
 				if node.position.distance_to(shippos) < prevplanet.position.distance_to(shippos) && node.position.distance_to(shippos) < 500:
 					prevplanet = node

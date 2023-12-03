@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-=======
+VisibleOnScreenNotifier2D
 Area2D
 ParallaxBackground
->>>>>>> 80be14c391789a1f3f3491b72668d62d59544ff0
 Sprite2D
 Node2D
 ParallaxBackground
 ParallaxLayer
 CanvasLayer
 Camera2D
-VisibleOnScreenNotifier2D
 Timer
 PinJoint2D
 GrooveJoint2D
 RigidBody2D
 CollisionPolygon2D
-Polygon2D

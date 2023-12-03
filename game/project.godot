@@ -19,7 +19,7 @@ config/size/resizable=true
 
 [display]
 
-window/size/mode=2
+window/size/resizable=false
 
 [gui]
 

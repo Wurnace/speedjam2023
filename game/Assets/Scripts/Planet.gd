@@ -6,6 +6,8 @@ extends Node2D
 const AsteroidPathsIDs = [1]
 @export var asteroids = {} # Referenced asteroids' paths
 
+var distanceto = 0
+
 func setTexture(path: String):
 	$Sprite.texture = load(path)
 
@@ -15,6 +17,8 @@ func _ready():
 	$Sprite.scale = Vector2(planetscale, planetscale)
 	$Collision.scale = Vector2(planetscale, planetscale)
 	$Highlight.scale = Vector2(planetscale + 0.1, planetscale + 0.1)
+	$VisibleOnScreenNotifier2D.scale = Vector2(planetscale, planetscale)
+	$OffScreenIndicator.sprite.texture = $Sprite.texture
 
 func _show_highlight():
 	$Highlight.show()
@@ -26,6 +30,8 @@ func _on_hightlight_timeout_timeout():
 @export var isDead : bool = false
 func _process(_delta):
 	if isDead: queue_free()
+	$OffScreenIndicator.look_at(global_position)
+	$OffScreenIndicator.distanceto = distanceto
 
 func spawnAsteroid(filepath: String, rng: RandomNumberGenerator):
 	if not filepath in asteroids:
@@ -64,3 +70,11 @@ func destroy(_a, body, _c, _d, _BLAH: bool = true):
 		var current_asteroid_path = asteroidPaths[rng.randi_range(0, asteroidPaths.size()-1)]
 		spawnAsteroid(current_asteroid_path, rng)
 	isDead = true
+
+
+func _on_visible_on_screen_notifier_2d_screen_entered():
+	$OffScreenIndicator.sprite.hide()
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	$OffScreenIndicator.sprite.show()

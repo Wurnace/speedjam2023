@@ -1,17 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-<<<<<<< HEAD
-::res://::1701551980
-default_env.tres::Environment::2279363823076906227::1701551980::0::1::::<><>::
+::res://::1701605354
+default_env.tres::Environment::2279363823076906227::1701605354::0::1::::<><>::
 icon.svg::CompressedTexture2D::7295254424364741391::1701527861::1701527981::1::::<><>::
-ship.tscn::PackedScene::1529522080747611988::1701551980::0::1::::<><>::uid://0gl1ogd1s4x0::::res://Assets/Sprites/ship.png<>uid://cjxjtseu7s1dv::::res://Assets/Sprites/ship_magnet.png
+ship.tscn::PackedScene::1529522080747611988::1701605353::0::1::::<><>::uid://0gl1ogd1s4x0::::res://Assets/Sprites/ship.png<>res://Assets/Scripts/ship.gd<>uid://cjxjtseu7s1dv::::res://Assets/Sprites/ship_magnet.png
 ::res://Assets/::1701527861
-::res://Assets/Scripts/::1701551954
-Game.gd::GDScript::-1::1701549488::0::1::::<>Node2D<>::
-Planet.gd::GDScript::-1::1701551954::0::1::::<>Node2D<>::
-ship.gd::GDScript::-1::1701538424::0::1::::<>RigidBody2D<>::
-::res://Assets/Sprites/::1701552545
+::res://Assets/Scripts/::1701605353
+Game.gd::GDScript::-1::1701557753::0::1::::<>Node2D<>::
+Planet.gd::GDScript::-1::1701605353::0::1::::<>Node2D<>::
+ship.gd::GDScript::-1::1701557229::0::1::::<>RigidBody2D<>::
+::res://Assets/Sprites/::1701605712
+arrow.png::CompressedTexture2D::5627356461901014490::1701605712::1701605742::1::::<><>::
 DryPlanet.png::CompressedTexture2D::537536634577033139::1701551813::1701551815::1::::<><>::
-EggshellPlanet.png::CompressedTexture2D::5575210593755759694::1701552545::1701552546::1::::<><>::
+EggshellPlanet.png::CompressedTexture2D::5575210593755759694::1701605741::1701605742::1::::<><>::
 egPlanet.png::CompressedTexture2D::3965139954092430749::1701527861::1701527861::1::::<><>::
 Highlight.png::CompressedTexture2D::7283170567576549954::1701537296::1701537298::1::::<><>::
 IcePlanet.png::CompressedTexture2D::8723548141989236573::1701551340::1701551708::1::::<><>::
@@ -23,44 +23,15 @@ spaceBackground.png::CompressedTexture2D::5218931477044278440::1701545639::17015
 spaceBackgroundtransparent.png::CompressedTexture2D::4223519537684415304::1701548648::1701548668::1::::<><>::
 spaceBackgroundtransparentbutnotanditsactuallyblack.png::CompressedTexture2D::6891962311554824651::1701548667::1701548668::1::::<><>::
 Water Planet.png::CompressedTexture2D::4915226883827192143::1701532915::1701532918::1::::<><>::
-::res://Scenes/::1701551980
-Debris.tscn::PackedScene::-1::1701533909::0::1::::<><>::
-Game.tscn::PackedScene::3511533563080843621::1701551980::0::1::::<><>::uid://v16agashiiyu::::res://ship.tscn<>res://Assets/Scripts/Game.gd<>uid://b1f50qxce6qcm::::res://Assets/Sprites/spaceBackgroundtransparent.png<>uid://c1ce62uuj2nya::::res://Scenes/Planet.tscn<>uid://ws6al1qv7560::::res://Assets/Sprites/PurplePlanet.png<>uid://c5gru24san4ot::::res://Assets/Sprites/spaceBackgroundtransparentbutnotanditsactuallyblack.png<>uid://bcbsdvrpisokx::::res://Assets/Sprites/Red Planet.png<>uid://hwnfdhf1kfy6::::res://Assets/Sprites/DryPlanet.png<>uid://dwj0tfi1ucn2d::::res://Assets/Sprites/IcePlanet.png
-Planet.tscn::PackedScene::6602179735013636044::1701551980::0::1::::<><>::res://Assets/Scripts/Planet.gd<>uid://bcbsdvrpisokx::::res://Assets/Sprites/Red Planet.png<>uid://cca8clmlqdy1d::::res://Assets/Sprites/Water Planet.png<>uid://db1a0w77dqs7k::::res://Assets/Sprites/Highlight.png
-OffScreenIndicator.tscn::PackedScene::4150064246072654853::1701541010::0::1::::<><>::uid://db641llx80bid::::res://icon.svg
-Menu.tscn::PackedScene::5023056760913991309::1701551980::0::1::::<><>::res://Scenes/Menu.gd<>uid://cgmdblafswlh5::::res://Assets/Sprites/spaceBackground.png
-Menu.gd::GDScript::-1::1701545678::0::1::::<>Node2D<>::
-Rope.tscn::PackedScene::7764152754940450114::1701551980::0::1::::<><>::uid://db641llx80bid::::res://icon.svg
+::res://Assets/Sprites/Asteroids/::1701552696
+Asteroid1.webp::CompressedTexture2D::6324653199041067569::1701552696::1701552696::1::::<><>::
+::res://Scenes/::1701605354
+Game.tscn::PackedScene::3511533563080843621::1701605353::0::1::::<><>::uid://v16agashiiyu::::res://ship.tscn<>res://Assets/Scripts/Game.gd<>uid://b1f50qxce6qcm::::res://Assets/Sprites/spaceBackgroundtransparent.png<>uid://c1ce62uuj2nya::::res://Scenes/Planet.tscn<>uid://c5gru24san4ot::::res://Assets/Sprites/spaceBackgroundtransparentbutnotanditsactuallyblack.png<>uid://bcbsdvrpisokx::::res://Assets/Sprites/Red Planet.png<>uid://hwnfdhf1kfy6::::res://Assets/Sprites/DryPlanet.png<>uid://clow5y7deoht3::::res://Assets/Sprites/EggshellPlanet.png
+Planet.tscn::PackedScene::6602179735013636044::1701605354::0::1::::<><>::res://Assets/Scripts/Planet.gd<>uid://bcbsdvrpisokx::::res://Assets/Sprites/Red Planet.png<>uid://cca8clmlqdy1d::::res://Assets/Sprites/Water Planet.png<>uid://db1a0w77dqs7k::::res://Assets/Sprites/Highlight.png<>uid://b0ek7mjty26ej::::res://Scenes/OffScreenIndicator.tscn
+OffScreenIndicator.tscn::PackedScene::4150064246072654853::1701605354::0::1::::<><>::uid://db641llx80bid::::res://icon.svg
+Menu.tscn::PackedScene::5023056760913991309::1701605354::0::1::::<><>::res://Scenes/Menu.gd<>uid://cgmdblafswlh5::::res://Assets/Sprites/spaceBackground.png
+Menu.gd::GDScript::-1::1701552710::0::1::::<>Node2D<>::
+Rope.tscn::PackedScene::7764152754940450114::1701605353::0::1::::<><>::uid://db641llx80bid::::res://icon.svg
 ship.tscn::PackedScene::-1::1701533909::0::1::::<><>::
-=======
-::res://::1701603306
-default_env.tres::Environment::2279363823076906227::1701603013::0::1::::<><>::
-icon.svg::CompressedTexture2D::7295254424364741391::1701582999::1701583155::1::::<><>::
-ship.tscn::PackedScene::1529522080747611988::1701602046::0::1::::<><>::uid://0gl1ogd1s4x0::::res://Assets/Sprites/ship.png
-::res://Assets/::1701582999
-::res://Assets/Scripts/::1701603000
-Game.gd::GDScript::-1::1701602046::0::1::::<>Node2D<>::
-Planet.gd::GDScript::-1::1701603000::0::1::::<>Node2D<>::
-ship.gd::GDScript::-1::1701602120::0::1::::<>RigidBody2D<>::
-::res://Assets/Sprites/::1701603266
-egPlanet.png::CompressedTexture2D::3965139954092430749::1701582999::1701582999::1::::<><>::
-Highlight.png::CompressedTexture2D::7283170567576549954::1701602046::1701602046::1::::<><>::
-PurplePlanet.png::CompressedTexture2D::1583196205063638527::1701602046::1701602046::1::::<><>::
-Red Planet.png::CompressedTexture2D::2529962141919710803::1701598706::1701598706::1::::<><>::
-ship.png::CompressedTexture2D::1767822419804647979::1701602046::1701602046::1::::<><>::
-spaceBackground.png::CompressedTexture2D::5218931477044278440::1701602046::1701602046::1::::<><>::
-spaceBackgroundtransparent.png::CompressedTexture2D::4223519537684415304::1701602046::1701602046::1::::<><>::
-Water Planet.png::CompressedTexture2D::4915226883827192143::1701598706::1701598706::1::::<><>::
-::res://Assets/Sprites/Asteroids/::1701603306
-Asteroid1.webp::CompressedTexture2D::6324653199041067569::1701603205::1701603306::1::::<><>::
-::res://Scenes/::1701603046
-Game.tscn::PackedScene::3511533563080843621::1701603013::0::1::::<><>::uid://v16agashiiyu::::res://ship.tscn<>res://Assets/Scripts/Game.gd<>uid://cgmdblafswlh5::::res://Assets/Sprites/spaceBackground.png<>uid://b1f50qxce6qcm::::res://Assets/Sprites/spaceBackgroundtransparent.png<>uid://c1ce62uuj2nya::::res://Scenes/Planet.tscn<>uid://ws6al1qv7560::::res://Assets/Sprites/PurplePlanet.png<>uid://bcbsdvrpisokx::::res://Assets/Sprites/Red Planet.png
-Menu.gd::GDScript::-1::1701602046::0::1::::<>Node2D<>::
-Menu.tscn::PackedScene::5023056760913991309::1701602046::0::1::::<><>::res://Scenes/Menu.gd<>uid://cgmdblafswlh5::::res://Assets/Sprites/spaceBackground.png
-OffScreenIndicator.tscn::PackedScene::4150064246072654853::1701602046::0::1::::<><>::uid://db641llx80bid::::res://icon.svg
-Planet.tscn::PackedScene::6602179735013636044::1701603013::0::1::::<><>::res://Assets/Scripts/Planet.gd<>uid://bcbsdvrpisokx::::res://Assets/Sprites/Red Planet.png<>uid://cca8clmlqdy1d::::res://Assets/Sprites/Water Planet.png<>uid://db1a0w77dqs7k::::res://Assets/Sprites/Highlight.png
-Rope.tscn::PackedScene::7764152754940450114::1701598706::0::1::::<><>::uid://db641llx80bid::::res://icon.svg
-ship.tscn::PackedScene::4824290431529218262::1701602038::0::1::::<><>::res://Assets/Scripts/ship.gd<>uid://db641llx80bid::::res://icon.svg
-::res://Scenes/Asteroids/::1701603132
-Asteroid1.tscn::PackedScene::-1::1701603101::0::1::::<><>::
->>>>>>> 80be14c391789a1f3f3491b72668d62d59544ff0
+::res://Scenes/Asteroids/::1701605354
+Asteroid1.tscn::PackedScene::2490753488397525010::1701605354::0::1::::<><>::uid://cwdyd47l226rl::::res://Assets/Sprites/Asteroids/Asteroid1.webp

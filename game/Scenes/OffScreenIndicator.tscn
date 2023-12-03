@@ -1,40 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0ek7mjty26ej"]
+[gd_scene load_steps=4 format=3 uid="uid://b0ek7mjty26ej"]
 
-[ext_resource type="Texture2D" uid="uid://db641llx80bid" path="res://icon.svg" id="2_vrt7y"]
+[ext_resource type="Texture2D" uid="uid://clow5y7deoht3" path="res://Assets/Sprites/EggshellPlanet.png" id="1_xb7l7"]
+[ext_resource type="Texture2D" uid="uid://cmf60eaif46xy" path="res://Assets/Sprites/arrow.png" id="2_f57jl"]
 
 [sub_resource type="GDScript" id="GDScript_b4rnp"]
 script/source = "extends Node2D
 
 var camera
 @onready var sprite = $Indicator
+var distanceto = 0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera = get_viewport().get_camera_2d()
-	camera.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	global_position.x = clamp(global_position, -screensizex/2, screensizex/2)
-	global_position.y = clamp(global_position, -screensizey/2, screensizey/2)
-
-
-func _on_visible_on_screen_notifier_2d_screen_entered():
-	sprite.hide()
-
-
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	sprite.show()
+	global_position = camera.global_position
+	sprite.position.x = 25 * (clampf(distanceto, 500, 1500) / 100)
 "
 
 [node name="OffScreenIndicator" type="Node2D"]
 script = SubResource("GDScript_b4rnp")
 
 [node name="Indicator" type="Sprite2D" parent="."]
-position = Vector2(128, 0)
-texture = ExtResource("2_vrt7y")
+position = Vector2(256, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_xb7l7")
+
+[node name="Indicator2" type="Sprite2D" parent="Indicator"]
+position = Vector2(160, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_f57jl")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
