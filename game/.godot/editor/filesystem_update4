@@ -1,5 +1,3 @@
-res://default_env.tres
-res://Spatial.tscn
-res://shader_testing/pixelart_stylizer.gdshader
-res://movement.tscn
-res://glider.gd
+res://Scenes/Planet.tscn
+res://Assets/Scripts/Planet.gd
+res://Scenes/Game.tscn
