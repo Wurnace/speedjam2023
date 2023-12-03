@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgmdblafswlh5"
-path="res://.godot/imported/spaceBackground.png-3b31bd744ae357f3ef8376919780b42b.ctex"
+uid="uid://dwj0tfi1ucn2d"
+path="res://.godot/imported/IcePlanet.png-63ced1cd90c9875a5f523f7c03b144a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/spaceBackground.png"
-dest_files=["res://.godot/imported/spaceBackground.png-3b31bd744ae357f3ef8376919780b42b.ctex"]
+source_file="res://Assets/Sprites/Planets/IcePlanet.png"
+dest_files=["res://.godot/imported/IcePlanet.png-63ced1cd90c9875a5f523f7c03b144a8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ws6al1qv7560"
-path="res://.godot/imported/PurplePlanet.png-fc1fe5d6d590c09b3559ee6d05c23278.ctex"
+uid="uid://bcbsdvrpisokx"
+path="res://.godot/imported/Red Planet.png-26047c4ad1703922c62109471854c5c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/PurplePlanet.png"
-dest_files=["res://.godot/imported/PurplePlanet.png-fc1fe5d6d590c09b3559ee6d05c23278.ctex"]
+source_file="res://Assets/Sprites/Planets/Red Planet.png"
+dest_files=["res://.godot/imported/Red Planet.png-26047c4ad1703922c62109471854c5c4.ctex"]
 
 [params]
 

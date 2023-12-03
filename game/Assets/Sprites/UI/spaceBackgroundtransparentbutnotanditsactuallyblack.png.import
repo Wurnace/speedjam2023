@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clow5y7deoht3"
-path="res://.godot/imported/EggshellPlanet.png-1b6df8889c53c391eeee41e54a38f291.ctex"
+uid="uid://c5gru24san4ot"
+path="res://.godot/imported/spaceBackgroundtransparentbutnotanditsactuallyblack.png-fdae1704dde573a429db7bc3620389b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/EggshellPlanet.png"
-dest_files=["res://.godot/imported/EggshellPlanet.png-1b6df8889c53c391eeee41e54a38f291.ctex"]
+source_file="res://Assets/Sprites/UI/spaceBackgroundtransparentbutnotanditsactuallyblack.png"
+dest_files=["res://.godot/imported/spaceBackgroundtransparentbutnotanditsactuallyblack.png-fdae1704dde573a429db7bc3620389b6.ctex"]
 
 [params]
 

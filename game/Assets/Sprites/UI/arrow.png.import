@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcbsdvrpisokx"
-path="res://.godot/imported/Red Planet.png-3b42c89baac3e6b22ab8d26f0ab34c4f.ctex"
+uid="uid://cmf60eaif46xy"
+path="res://.godot/imported/arrow.png-8e07c35d14a15694847eda7a334fbb50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Red Planet.png"
-dest_files=["res://.godot/imported/Red Planet.png-3b42c89baac3e6b22ab8d26f0ab34c4f.ctex"]
+source_file="res://Assets/Sprites/UI/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-8e07c35d14a15694847eda7a334fbb50.ctex"]
 
 [params]
 

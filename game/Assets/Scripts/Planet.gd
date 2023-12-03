@@ -17,6 +17,7 @@ func _ready():
 	$Sprite.scale = Vector2(planetscale, planetscale)
 	$Collision.scale = Vector2(planetscale, planetscale)
 	$Highlight.scale = Vector2(planetscale + 0.1, planetscale + 0.1)
+	$GravityFeild.scale = Vector2(planetscale, planetscale)
 	$VisibleOnScreenNotifier2D.scale = Vector2(planetscale, planetscale)
 	$OffScreenIndicator.sprite.texture = $Sprite.texture
 
@@ -73,8 +74,12 @@ func destroy(_a, body, _c, _d, _BLAH: bool = true):
 
 
 func _on_visible_on_screen_notifier_2d_screen_entered():
-	$OffScreenIndicator.sprite.hide()
+	var wr = weakref($OffScreenIndicator.sprite)
+	if wr.get_ref():
+		$OffScreenIndicator.sprite.hide()
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
-	$OffScreenIndicator.sprite.show()
+	var wr = weakref($OffScreenIndicator.sprite)
+	if wr.get_ref():
+		$OffScreenIndicator.sprite.show()

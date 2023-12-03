@@ -1,18 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1ce62uuj2nya"]
+[gd_scene load_steps=9 format=3 uid="uid://c1ce62uuj2nya"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Planet.gd" id="1_8umit"]
-[ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Red Planet.png" id="2_mvwfd"]
-[ext_resource type="Texture2D" uid="uid://cca8clmlqdy1d" path="res://Assets/Sprites/Water Planet.png" id="2_ww3fa"]
-[ext_resource type="Texture2D" uid="uid://db1a0w77dqs7k" path="res://Assets/Sprites/Highlight.png" id="3_kyhvf"]
+[ext_resource type="Texture2D" uid="uid://cca8clmlqdy1d" path="res://Assets/Sprites/Planets/Water Planet.png" id="2_f7bnc"]
+[ext_resource type="Texture2D" uid="uid://db1a0w77dqs7k" path="res://Assets/Sprites/UI/Highlight.png" id="3_4qf21"]
 [ext_resource type="PackedScene" uid="uid://b0ek7mjty26ej" path="res://Scenes/OffScreenIndicator.tscn" id="4_36fvu"]
+[ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Planets/Red Planet.png" id="4_87ix6"]
+[ext_resource type="Script" path="res://Scenes/Gravity.gd" id="6_qtxdv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8j6o"]
 radius = 112.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qbri2"]
+radius = 448.0
+
 [node name="Planet" type="RigidBody2D"]
 gravity_scale = 0.002
 script = ExtResource("1_8umit")
-texturepath = ExtResource("2_ww3fa")
+texturepath = ExtResource("2_f7bnc")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m8j6o")
@@ -21,10 +25,10 @@ shape = SubResource("CircleShape2D_m8j6o")
 visible = false
 modulate = Color(1, 1, 1, 0.945098)
 scale = Vector2(1.1, 1.1)
-texture = ExtResource("3_kyhvf")
+texture = ExtResource("3_4qf21")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_mvwfd")
+texture = ExtResource("4_87ix6")
 
 [node name="HightlightTimeout" type="Timer" parent="."]
 wait_time = 0.032
@@ -35,7 +39,16 @@ wait_time = 0.032
 position = Vector2(-3.09944e-06, -4.76837e-07)
 rect = Rect2(-90, -90, 180, 180)
 
+[node name="GravityFeild" type="Area2D" parent="."]
+collision_layer = 0
+script = ExtResource("6_qtxdv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GravityFeild"]
+shape = SubResource("CircleShape2D_qbri2")
+
 [connection signal="body_shape_entered" from="." to="." method="destroy"]
 [connection signal="timeout" from="HightlightTimeout" to="." method="_on_hightlight_timeout_timeout"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_shape_entered" from="GravityFeild" to="GravityFeild" method="_on_body_shape_entered"]
+[connection signal="body_shape_exited" from="GravityFeild" to="GravityFeild" method="_on_body_shape_exited"]

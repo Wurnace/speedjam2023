@@ -54,9 +54,14 @@ func _on_ship_connect_to_closest_body_really():
 	
 	if prevplanet:
 		targetplanet = prevplanet
+		targetplanet.find_child("GravityFeild").monitoring = false
 		pinjoint.global_position = prevplanet.global_position
 		pinjoint.set_node_a(prevplanet.get_path())
 
 
 func _on_ship_disconnect():
+	var wr = weakref(targetplanet)
+	if (wr.get_ref()):
+		targetplanet.find_child("GravityFeild").monitoring = true
+	targetplanet = null
 	pinjoint.set_node_a(ship.get_path())

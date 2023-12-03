@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmf60eaif46xy"
-path="res://.godot/imported/arrow.png-bbd335070bdf81e88eb62bb6c396cfe3.ctex"
+uid="uid://hwnfdhf1kfy6"
+path="res://.godot/imported/DryPlanet.png-8dee2fb712a3edc3c2a3aa658fb2673b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-bbd335070bdf81e88eb62bb6c396cfe3.ctex"]
+source_file="res://Assets/Sprites/Planets/DryPlanet.png"
+dest_files=["res://.godot/imported/DryPlanet.png-8dee2fb712a3edc3c2a3aa658fb2673b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hwnfdhf1kfy6"
-path="res://.godot/imported/DryPlanet.png-7401967f7d6c5c6500e8035161768b47.ctex"
+uid="uid://b1f50qxce6qcm"
+path="res://.godot/imported/spaceBackgroundtransparent.png-e55383c70afb20b78c9b9673f81f1c62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DryPlanet.png"
-dest_files=["res://.godot/imported/DryPlanet.png-7401967f7d6c5c6500e8035161768b47.ctex"]
+source_file="res://Assets/Sprites/UI/spaceBackgroundtransparent.png"
+dest_files=["res://.godot/imported/spaceBackgroundtransparent.png-e55383c70afb20b78c9b9673f81f1c62.ctex"]
 
 [params]
 

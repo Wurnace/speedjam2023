@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwj0tfi1ucn2d"
-path="res://.godot/imported/IcePlanet.png-4805af17536d02a27da4723cdcbdcc13.ctex"
+uid="uid://cca8clmlqdy1d"
+path="res://.godot/imported/Water Planet.png-e95b4d4dd7cc1cd1aeec614ec6e09c79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/IcePlanet.png"
-dest_files=["res://.godot/imported/IcePlanet.png-4805af17536d02a27da4723cdcbdcc13.ctex"]
+source_file="res://Assets/Sprites/Planets/Water Planet.png"
+dest_files=["res://.godot/imported/Water Planet.png-e95b4d4dd7cc1cd1aeec614ec6e09c79.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cca8clmlqdy1d"
-path="res://.godot/imported/Water Planet.png-3c704d970bce319ad5b5fedcc3e5fb1f.ctex"
+uid="uid://clow5y7deoht3"
+path="res://.godot/imported/EggshellPlanet.png-bb7787cce79153b2179b439a0f449b0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Water Planet.png"
-dest_files=["res://.godot/imported/Water Planet.png-3c704d970bce319ad5b5fedcc3e5fb1f.ctex"]
+source_file="res://Assets/Sprites/Planets/EggshellPlanet.png"
+dest_files=["res://.godot/imported/EggshellPlanet.png-bb7787cce79153b2179b439a0f449b0b.ctex"]
 
 [params]
 

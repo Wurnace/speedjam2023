@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5gru24san4ot"
-path="res://.godot/imported/spaceBackgroundtransparentbutnotanditsactuallyblack.png-dc39c8c01895255cca66d311d785d9a9.ctex"
+uid="uid://ws6al1qv7560"
+path="res://.godot/imported/PurplePlanet.png-696f45477f4d337c8b35dc7ffbb02f8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/spaceBackgroundtransparentbutnotanditsactuallyblack.png"
-dest_files=["res://.godot/imported/spaceBackgroundtransparentbutnotanditsactuallyblack.png-dc39c8c01895255cca66d311d785d9a9.ctex"]
+source_file="res://Assets/Sprites/Planets/PurplePlanet.png"
+dest_files=["res://.godot/imported/PurplePlanet.png-696f45477f4d337c8b35dc7ffbb02f8b.ctex"]
 
 [params]
 
