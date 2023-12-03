@@ -10,10 +10,13 @@ radius = 112.0
 
 [node name="Planet" type="RigidBody2D"]
 gravity_scale = 0.002
+max_contacts_reported = 5
+contact_monitor = true
 script = ExtResource("1_8umit")
 texturepath = ExtResource("2_ww3fa")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_m8j6o")
 
 [node name="Highlight" type="Sprite2D" parent="."]
@@ -28,4 +31,5 @@ texture = ExtResource("2_mvwfd")
 [node name="HightlightTimeout" type="Timer" parent="."]
 wait_time = 0.032
 
+[connection signal="body_shape_entered" from="." to="." method="destroy"]
 [connection signal="timeout" from="HightlightTimeout" to="." method="_on_hightlight_timeout_timeout"]
