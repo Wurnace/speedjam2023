@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdthamxlt8jib"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Menu.gd" id="1_xknxd"]
+[ext_resource type="Texture2D" uid="uid://cgmdblafswlh5" path="res://Assets/Sprites/spaceBackground.png" id="2_pe6yo"]
+[ext_resource type="Texture2D" uid="uid://dn6rkdlrcsmuf" path="res://Assets/Sprites/Menu/PlayButton.png" id="3_fb373"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_xknxd")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("2_pe6yo")
+
+[node name="Camera2D" type="Camera2D" parent="Background"]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 200.0
+offset_top = 184.0
+offset_right = 404.0
+offset_bottom = 288.0
+action_mode = 0
+texture_normal = ExtResource("3_fb373")
+stretch_mode = 0
+
+[connection signal="button_down" from="TextureButton" to="." method="PlayGame"]
