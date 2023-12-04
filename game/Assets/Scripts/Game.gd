@@ -10,12 +10,14 @@ var totalPlanets
 @export var planetsLeft : int
 var is_timing = true
 var Winning = false
+@onready var audiomaster = get_node("/root/AudioMaster")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	planets = get_tree().get_nodes_in_group("planet")
 	totalPlanets = planets.size()
 	planetsLeft = totalPlanets
+	audiomaster.play_game_music()
 
 
 
@@ -104,6 +106,7 @@ func _on_reset_timeout():
 
 
 func _on_planet_dying(planet: RigidBody2D):
+	audiomaster.play_sound("PlanetImpact", planet.global_position)
 	planetsLeft -= 1
 	if targetplanet == planet: _on_ship_disconnect()
 	
@@ -113,6 +116,7 @@ func _on_planet_dying(planet: RigidBody2D):
 
 
 func _on_ship_dying():
+	audiomaster.play_sound("ShipImpact")
 	$Reset.start()
 
 

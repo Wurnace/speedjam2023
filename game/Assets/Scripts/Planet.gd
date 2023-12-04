@@ -4,7 +4,7 @@ extends Node2D
 @export var planetscale = 1.0
 @export var grabbed : bool = false
 
-const AsteroidPathsIDs = [1]
+const AsteroidPathsIDs = [1, 2, 3]
 @export var asteroids = {} # Referenced asteroids' paths
 
 var distanceto = 0
@@ -47,7 +47,7 @@ func spawnAsteroid(filepath: String, totalToSpawn: int, rng: RandomNumberGenerat
 	var inst = asteroids.get(filepath).instantiate()
 	inst.position = position + deviation
 	
-	var rand_scale = (rng.randf_range(-0.3, 0.3) + planetscale) / totalToSpawn
+	var rand_scale = max(rng.randf_range(-0.3, 0.3) + planetscale, 0.3) / totalToSpawn
 	var size = Vector2(rand_scale, rand_scale)
 	inst.get_node("Collision").scale = size
 	inst.get_node("Sprite").scale = size

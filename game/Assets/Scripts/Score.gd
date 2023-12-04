@@ -16,9 +16,11 @@ var background
 @onready var pathfollow = $Path2D/PathFollow2D
 @onready var propsprite = $Sprite2D
 @onready var global = get_node("/root/VarStorer")
+@onready var audiomaster = get_node("/root/AudioMaster")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	audiomaster.play_menu_music()
 	background = $Background
 	$Sprite2D2/CurrentTimes.text = global.time
 	if return_saved_data() is Dictionary:
@@ -40,10 +42,12 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 
 func _on_texture_button_pressed():
+	audiomaster.play_sound("Click")
 	get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
 
 
 func _on_save_button_pressed():
+	audiomaster.play_sound("Click")
 	if $Sprite2D2/NameEnter.text != "":
 		$Sprite2D2/NameEnter.editable = false
 		$Sprite2D2/SaveButton.disabled = true

@@ -23,6 +23,7 @@ config/size/resizable=true
 [autoload]
 
 VarStorer="*res://Assets/Scripts/VarStorer.gd"
+AudioMaster="*res://Scenes/AudioMaster.tscn"
 
 [display]
 

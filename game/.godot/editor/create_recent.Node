@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+AudioStreamPlayer
 Sprite2D
 Node
 Polygon2D
@@ -11,4 +13,3 @@ ScrollContainer
 CPUParticles2D
 CanvasLayer
 VisibleOnScreenNotifier2D
-PathFollow2D

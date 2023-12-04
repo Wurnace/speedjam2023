@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqbapeefmtljp"]
+[gd_scene load_steps=14 format=3 uid="uid://bqbapeefmtljp"]
 
 [ext_resource type="PackedScene" uid="uid://v16agashiiyu" path="res://ship.tscn" id="1_ij78r"]
 [ext_resource type="Script" path="res://Assets/Scripts/Game.gd" id="1_sj8ra"]
@@ -8,9 +8,11 @@
 [ext_resource type="FontFile" uid="uid://u5dtt5l65xwn" path="res://Assets/Fonts/Belanosima-Bold.ttf" id="4_q4kl7"]
 [ext_resource type="Texture2D" uid="uid://hwnfdhf1kfy6" path="res://Assets/Sprites/Planets/DryPlanet.png" id="7_uk3r3"]
 [ext_resource type="Texture2D" uid="uid://bcbsdvrpisokx" path="res://Assets/Sprites/Planets/Red Planet.png" id="8_2csjj"]
+[ext_resource type="Texture2D" uid="uid://buqp3x7k77i6q" path="res://Assets/Sprites/Planets/RedBluePlanet.png" id="9_1krb3"]
 [ext_resource type="Texture2D" uid="uid://dwj0tfi1ucn2d" path="res://Assets/Sprites/Planets/IcePlanet.png" id="9_778wr"]
 [ext_resource type="Texture2D" uid="uid://clow5y7deoht3" path="res://Assets/Sprites/Planets/EggshellPlanet.png" id="9_fqrjl"]
 [ext_resource type="Texture2D" uid="uid://ws6al1qv7560" path="res://Assets/Sprites/Planets/PurplePlanet.png" id="10_jd1ug"]
+[ext_resource type="Texture2D" uid="uid://0m4f6fnt6rqo" path="res://Assets/Sprites/Planets/BumpPlanet.png" id="10_xti4d"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_sj8ra")
@@ -81,13 +83,14 @@ planetscale = 0.8
 position = Vector2(-440, 1080)
 max_contacts_reported = 1
 contact_monitor = true
+texturepath = ExtResource("9_1krb3")
 planetscale = 1.6
 
 [node name="Planet6" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
 position = Vector2(-1384, -624)
 max_contacts_reported = 1
 contact_monitor = true
-texturepath = ExtResource("8_2csjj")
+texturepath = ExtResource("10_xti4d")
 planetscale = 0.3
 
 [node name="Planet7" parent="." groups=["planet"] instance=ExtResource("2_opuig")]
