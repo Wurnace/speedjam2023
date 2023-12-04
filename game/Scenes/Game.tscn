@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqbapeefmtljp"]
+[gd_scene load_steps=17 format=3 uid="uid://bqbapeefmtljp"]
 
 [ext_resource type="PackedScene" uid="uid://v16agashiiyu" path="res://ship.tscn" id="1_ij78r"]
 [ext_resource type="Script" path="res://Assets/Scripts/Game.gd" id="1_sj8ra"]
@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://clow5y7deoht3" path="res://Assets/Sprites/Planets/EggshellPlanet.png" id="9_fqrjl"]
 [ext_resource type="Texture2D" uid="uid://ws6al1qv7560" path="res://Assets/Sprites/Planets/PurplePlanet.png" id="10_jd1ug"]
 [ext_resource type="Texture2D" uid="uid://0m4f6fnt6rqo" path="res://Assets/Sprites/Planets/BumpPlanet.png" id="10_xti4d"]
+[ext_resource type="Script" path="res://Assets/Scripts/GameStartPause.gd" id="14_xxyx6"]
+[ext_resource type="Texture2D" uid="uid://cgmdblafswlh5" path="res://Assets/Sprites/UI/spaceBackground.png" id="15_7kyib"]
+[ext_resource type="FontFile" uid="uid://ctvcrvsesyubc" path="res://Assets/Fonts/Belanosima-Regular.ttf" id="16_0ydx6"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_sj8ra")
@@ -132,6 +135,24 @@ scroll_active = false
 
 [node name="WinDelay" type="Timer" parent="."]
 wait_time = 1.4
+
+[node name="Pause" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("14_xxyx6")
+
+[node name="Fade" type="Sprite2D" parent="Pause"]
+modulate = Color(1, 1, 1, 0.709804)
+texture = ExtResource("15_7kyib")
+
+[node name="Instructions" type="RichTextLabel" parent="Pause"]
+offset_left = -120.0
+offset_top = -16.0
+offset_right = 112.0
+offset_bottom = 80.0
+theme_override_fonts/normal_font = ExtResource("16_0ydx6")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Press Any Key To Start[center]"
 
 [connection signal="connect_to_closest_body" from="ShipContainer/Ship" to="." method="_on_ship_connect_to_closest_body"]
 [connection signal="connect_to_closest_body_really" from="ShipContainer/Ship" to="." method="_on_ship_connect_to_closest_body_really"]

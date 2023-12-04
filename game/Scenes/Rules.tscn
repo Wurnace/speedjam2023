@@ -51,9 +51,9 @@ theme_override_font_sizes/normal_font_size = 23
 bbcode_enabled = true
 text = "[center]Like the name suggests, your goal is to destroy all the planets in the solar system as soon as possible, by grabbing them and throwing them at objects! 
 
-Objects Can be grabbed when you go close to them, show by the white outlines on the planets. 
+Objects Can be grabbed when you go close to them, shown by the white outlines on the planets. 
 
-However, beware, as getting too close could mean you get sucked up by its gravity! Stay a safe distancce from planets and asteroids fromed by destroying them!
+However, beware, as getting too close could mean you get sucked up by its gravity! Stay a safe distance from planets and asteroids formed by destroying them!
 [/center]"
 scroll_active = false
 
@@ -66,9 +66,9 @@ texture = ExtResource("4_hm1bp")
 centered = false
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 120.0
+offset_left = 88.0
 offset_top = 504.0
-offset_right = 472.0
+offset_right = 440.0
 offset_bottom = 624.0
 texture_normal = ExtResource("5_03btw")
 texture_pressed = ExtResource("6_0g0sw")
@@ -79,9 +79,9 @@ stretch_mode = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
 layout_mode = 0
-offset_left = 16.0
+offset_left = 8.0
 offset_top = 16.0
-offset_right = 352.0
+offset_right = 344.0
 offset_bottom = 104.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)

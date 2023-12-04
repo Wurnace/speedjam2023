@@ -28,6 +28,7 @@ AudioMaster="*res://Scenes/AudioMaster.tscn"
 [display]
 
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [gui]
 

@@ -1,0 +1,15 @@
+res://Scenes/Asteroids/Asteroid1.tscn::9b5d4657d5e2315d281d2c55af859c60::1701716969::res://.godot/exported/133200997/export-8a03e60a89deb6d06a705afe7f24a6de-Asteroid1.scn
+res://Scenes/Asteroids/Asteroid2.tscn::123a5c25a6d42d1d9ee0d966c933a9de::1701716970::res://.godot/exported/133200997/export-a22c0731071ae9b6d91b787204fd80ab-Asteroid2.scn
+res://Scenes/Asteroids/Asteroid3.tscn::a9f12676f78cc4cba7f5e03cd146db1b::1701716970::res://.godot/exported/133200997/export-6bb99c0fa673fb1aeb95215b5c1fb7d5-Asteroid3.scn
+res://Scenes/AudioMaster.tscn::00cd749e68e4a313067bc322f065652c::1701716969::res://.godot/exported/133200997/export-4172ae9b272bdaf887b8bfc08e17e7f5-AudioMaster.scn
+res://Scenes/Game.tscn::d920ef6c19a42821b3bf689733274deb::1701717289::res://.godot/exported/133200997/export-8ec1ce4394550eef6b399142f35b815f-Game.scn
+res://Scenes/Menu.tscn::a3ab81d24578f21e8ac82877ef26af44::1701716969::res://.godot/exported/133200997/export-c66ca9adccb575bddabad42984d7fed5-Menu.scn
+res://Scenes/OffScreenIndicator.tscn::4d54cc19f63ba47bc7c544a8bbe6df1a::1701716969::res://.godot/exported/133200997/export-b4ca91aad5c3d6e24a4cb04402e402af-OffScreenIndicator.scn
+res://Scenes/Planet.tscn::ef4d3dca0062e4187c4e943637f95d8b::1701716969::res://.godot/exported/133200997/export-a03d7852fa3259af2c0d2f9dfd09d893-Planet.scn
+res://Scenes/Rules.tscn::cf90c0cc18a52ac21323ee1f41b87ea5::1701716969::res://.godot/exported/133200997/export-877455c9f429fb325cc736dc3a056138-Rules.scn
+res://Scenes/Score.tscn::bf4a6a611f76c94a0c0dc581ece3dc6b::1701716969::res://.godot/exported/133200997/export-b9f4748f4167786ae45beef8a8160d6b-Score.scn
+res://Scenes/ScoreDisplay.tscn::b2523c94d5ff997e0429d2a1a3b051cd::1701716969::res://.godot/exported/133200997/export-026e65599920e09360f323f53aa6e637-ScoreDisplay.scn
+res://Scenes/ScoreNoEdits.tscn::7da9380611409aa479ddcbab757fc381::1701716969::res://.godot/exported/133200997/export-f52453aceb485db37c1826174db7a73f-ScoreNoEdits.scn
+res://Scenes/VarStorer.tscn::0417652574c8d329b733042532ac1284::1701716969::res://.godot/exported/133200997/export-f3cd8d648b365e9c7deb679bd4f3a137-VarStorer.scn
+res://default_env.tres::262758c8edf44ec630fccd7d4ce11ed3::1701717289::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://ship.tscn::3c03ba7b37a68d22711533628cf0e1bb::1701716968::res://.godot/exported/133200997/export-0a22ef4bec81ee53d6f7196e309384b4-ship.scn

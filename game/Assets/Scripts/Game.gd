@@ -102,6 +102,7 @@ func _on_ship_disconnect():
 
 func _on_reset_timeout():
 	if not Winning:
+		global.WillShowInstructionsOnStart = true
 		get_tree().change_scene_to_file("res://Scenes/Game.tscn")
 
 

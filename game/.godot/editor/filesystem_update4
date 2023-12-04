@@ -20,3 +20,4 @@ res://Assets/Scripts/Score.gd
 res://Scenes/Asteroids/Asteroid.gd
 res://Scenes/Asteroids/Asteroid2.tscn
 res://Scenes/Asteroids/Asteroid3.tscn
+res://Assets/Scripts/AudioMaster.gd
