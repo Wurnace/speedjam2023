@@ -38,3 +38,7 @@ func _on_texture_button_pressed():
 
 func _on_texture_button_2_pressed():
 	get_tree().change_scene_to_file("res://Scenes/ScoreNoEdits.tscn")
+
+
+func _on_texture_button_3_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Rules.tscn")

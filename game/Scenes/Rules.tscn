@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://cggmp3nefwvjm"]
+
+[ext_resource type="FontFile" uid="uid://b4pfncn0u4kwx" path="res://Assets/Fonts/Belanosima-SemiBold.ttf" id="1_lx4oo"]
+[ext_resource type="Script" path="res://Assets/Scripts/Rules.gd" id="1_sqhsa"]
+[ext_resource type="Script" path="res://Assets/Scripts/RulesParallax.gd" id="2_raepl"]
+[ext_resource type="Texture2D" uid="uid://cgmdblafswlh5" path="res://Assets/Sprites/UI/spaceBackground.png" id="2_sdlg2"]
+[ext_resource type="Texture2D" uid="uid://b5ij5rd8cjjtt" path="res://Assets/Sprites/UI/Instructions.png" id="4_hm1bp"]
+[ext_resource type="Texture2D" uid="uid://dw63cnnr4wav4" path="res://Assets/Sprites/UI/PlayButtonNormal.png" id="5_03btw"]
+[ext_resource type="Texture2D" uid="uid://coom6wjhm8m7x" path="res://Assets/Sprites/UI/PlayButtonHover.png" id="6_0g0sw"]
+
+[node name="Rules" type="Node2D"]
+script = ExtResource("1_sqhsa")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(575, 322)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("2_sdlg2")
+script = ExtResource("2_raepl")
+
+[node name="Camera2D" type="Camera2D" parent="Background"]
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 333.0
+offset_top = 6.0
+offset_right = 757.0
+offset_bottom = 94.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.690196)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_lx4oo")
+theme_override_font_sizes/normal_font_size = 72
+text = "How To Play"
+scroll_active = false
+
+[node name="Title2" type="RichTextLabel" parent="."]
+offset_left = 40.0
+offset_top = 109.0
+offset_right = 489.0
+offset_bottom = 565.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 0.8)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.690196)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_lx4oo")
+theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
+text = "[center]Like the name suggests, your goal is to destroy all the planets in the solar system as soon as possible, by grabbing them and throwing them at objects! 
+
+Objects Can be grabbed when you go close to them, show by the white outlines on the planets. 
+
+However, beware, as getting too close could mean you get sucked up by its gravity! Stay a safe distancce from planets and asteroids fromed by destroying them!
+[/center]"
+scroll_active = false
+
+[node name="Instructions" type="Sprite2D" parent="."]
+process_mode = 3
+top_level = true
+position = Vector2(700, 109)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_hm1bp")
+centered = false
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 120.0
+offset_top = 504.0
+offset_right = 472.0
+offset_bottom = 624.0
+texture_normal = ExtResource("5_03btw")
+texture_pressed = ExtResource("6_0g0sw")
+texture_hover = ExtResource("6_0g0sw")
+texture_focused = ExtResource("6_0g0sw")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 352.0
+offset_bottom = 104.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.313726)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.690196)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_lx4oo")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Return to 
+Title Screen[/center]"
+scroll_active = false
+
+[connection signal="pressed" from="TextureButton" to="." method="TitleScreen"]

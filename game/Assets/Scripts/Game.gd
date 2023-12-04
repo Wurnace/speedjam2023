@@ -7,7 +7,7 @@ var planets
 var targetplanet
 var lapsedtime = 0.0
 var totalPlanets
-var planetsLeft
+@export var planetsLeft : int
 var is_timing = true
 var Winning = false
 
@@ -67,6 +67,8 @@ func _on_ship_connect_to_closest_body():
 
 
 func _on_ship_connect_to_closest_body_really():
+	if targetplanet: return
+	
 	var shippos = ship.global_position
 	var prevplanet
 	
@@ -84,24 +86,27 @@ func _on_ship_connect_to_closest_body_really():
 		targetplanet.find_child("GravityFeild").monitoring = false
 		pinjoint.global_position = prevplanet.global_position
 		pinjoint.set_node_a(prevplanet.get_path())
-
+		ship.magnet.visible = not ship.magnet.visible
 
 func _on_ship_disconnect():
+	if not targetplanet: return
 	var wr = weakref(targetplanet)
 	if (wr.get_ref()):
 		targetplanet.find_child("GravityFeild").monitoring = true
 	targetplanet = null
 	pinjoint.set_node_a(ship.get_path())
-
+	ship.magnet.visible = not ship.magnet.visible
+	#print("DISC.")
 
 func _on_reset_timeout():
 	if not Winning:
 		get_tree().change_scene_to_file("res://Scenes/Game.tscn")
 
 
-func _on_planet_dying():
-	print("AAh")
+func _on_planet_dying(planet: RigidBody2D):
 	planetsLeft -= 1
+	if targetplanet == planet: _on_ship_disconnect()
+	
 	if planetsLeft == 0:
 		global.time = $CanvasLayer2/RichTextLabel.text
 		$WinDelay.start()

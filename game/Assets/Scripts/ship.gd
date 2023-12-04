@@ -52,13 +52,18 @@ func _process(delta):
 		
 		velocitytotal = Vector2(velocityforward, 0).rotated(rotation)
 		linear_velocity = velocitytotal
-		
 
+func sleep(sec):
+	await get_tree().create_timer(sec).timeout
 
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	emit_signal("dying")
-	dead = true
-	$Sprite2D.hide()
-	$Sprite2D2.hide()
-	$CollisionShape2D.disabled = true
-	$CPUParticles2D.emitting = true
+	if body.name == "Planet": 
+		body.destroy(null, $".", null, null, true)
+	await sleep(0.05)
+	if not (get_parent().get_parent().planetsLeft < 1):
+		emit_signal("dying")
+		dead = true
+		$Sprite2D.hide()
+		$Sprite2D2.hide()
+		$CollisionShape2D.disabled = true
+		$CPUParticles2D.emitting = true

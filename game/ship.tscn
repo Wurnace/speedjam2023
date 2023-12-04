@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://v16agashiiyu"]
+[gd_scene load_steps=7 format=3 uid="uid://v16agashiiyu"]
 
 [ext_resource type="Texture2D" uid="uid://0gl1ogd1s4x0" path="res://Assets/Sprites/ship.png" id="1_1mveb"]
 [ext_resource type="Script" path="res://Assets/Scripts/ship.gd" id="1_mwe3f"]
 [ext_resource type="Texture2D" uid="uid://cjxjtseu7s1dv" path="res://Assets/Sprites/ship_magnet.png" id="2_iqxv6"]
+[ext_resource type="Texture2D" uid="uid://db641llx80bid" path="res://icon.svg" id="4_gf6bw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmrwo"]
 size = Vector2(32, 32)
@@ -26,8 +27,15 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_1mveb")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-scale = Vector2(0.438356, 0.438356)
+visible = false
+scale = Vector2(0.292237, 0.292237)
 texture = ExtResource("2_iqxv6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(332.891, -12)
+scale = Vector2(6, 0.2)
+texture = ExtResource("4_gf6bw")
+centered = false
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 emitting = false

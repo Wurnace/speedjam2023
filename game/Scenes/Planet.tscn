@@ -11,10 +11,11 @@
 radius = 112.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbri2"]
-radius = 448.0
+radius = 248.129
 
 [node name="Planet" type="RigidBody2D"]
-gravity_scale = 0.002
+gravity_scale = 0.0
+angular_damp = 0.1
 script = ExtResource("1_8umit")
 texturepath = ExtResource("2_f7bnc")
 

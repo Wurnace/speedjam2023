@@ -26,7 +26,6 @@ func _ready():
 		$Sprite2D2/Names.text = data["names"]
 		$Sprite2D2/Times.text = data["times"]
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	background.global_rotation += 0.001
